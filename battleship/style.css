@@ -1,0 +1,240 @@
+body{                  /* body with background color animation */
+    background: linear-gradient(90deg, white, rgb(0, 255, 234), grey,rgb(236, 43, 9),grey);
+    
+    background-repeat: no-repeat;
+    animation: backanim;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    height: 100vh;
+    background-size: 800% 200%;
+}
+@keyframes backanim{ /* animation for background color for body and for hover on squares*/
+    0%{
+        background-position: 25%, 50%;
+    }
+    50% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 25% 50%;
+    }
+}
+
+.ship-1-size{             /* size of ship 1*/
+    width: 75px;
+    height: 15px;
+    margin: 10px;
+}
+.ship-1{                 /* color of ship 1*/
+    background-color: blue;
+}
+.ship-2-size{             /* size of ship 2*/
+    width: 60px;
+    height: 15px;
+    margin: 10px;
+}
+.ship-2{                 /* color of ship 2*/
+    background-color: green;
+}
+.ship-3-size{               /* size of ship 3*/
+    width: 45px;
+    height: 15px;
+    margin: 10px;
+}
+.ship-3{                 /* color of ship 3*/                 
+    background-color: rgb(176, 62, 241);
+}
+.ship-4-size{               /* size of ship 4*/
+    width: 45px;
+    height: 15px;
+    margin: 10px;
+}
+.ship-4{                 /* color of ship 4*/
+    background-color: yellow;
+}
+.ship-5-size{                /* size of ship 5*/
+    width: 30px;
+    height: 15px;
+    margin: 10px;
+}
+.ship-5{                 /* color of ship 5*/
+    background-color: orange;
+}
+
+#game-canvas{           /* making the game-canvas more aesthatically pleasing */
+    width: 100%;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.square{              /* size of square */
+    width: 15px;
+    height: 15px;
+}
+
+.hit{                /* making the hits of color red */
+    background-color: red ;
+    border-radius: 5px;
+}
+
+.empty{             /* making the misses of color empty */
+    background-color: black ;
+    border-radius: 5px;
+}
+#computer > .occupied{               /* changing the color of computers ships to grey to make them invisible */
+    background-color: grey;
+}
+#computer > .hit{                   /* changing the color of computers ships hit to red*/
+    background-color: red ;
+}
+
+.main-title{            /* making the main-title more aesthatically pleasing */
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    gap: 250px;
+    z-index: 2;
+}
+.data-1{                   /* making the data-1 more aesthatically pleasing */
+    width: 94vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: larger;
+}
+.data-2{                       /* making the data-2 more aesthatically pleasing */
+    width: 94vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: larger;
+}
+button{                       /* making the button more aesthatically pleasing */
+    width: 5vw;
+    height: 5vh;
+    font-size: large;
+    font-weight: bolder;
+}
+.buttons{                       /* making the buttons more aesthatically pleasing */
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 98vw;
+    gap: 50px;
+
+}
+
+.extra-info{                       /* making the extra-info more aesthatically pleasing and calling the animation*/
+    width: 94vw;
+    color: rgb(1, 1, 112);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    text-align: center;
+    animation: textanim;
+    animation-duration: 5s;
+}
+.extra-info::before{             /*preparing it for animations on start*/
+    line-height: 0;
+}
+
+@keyframes textanim{            /*animations for extra-info,squares expanding text*/
+    0%{
+        line-height: 0;
+    }
+    50% {
+        line-height: 0.7;
+    }
+    100% {
+        line-height: 1;
+    }
+}
+.buttonx{                       /* making the buttonx more aesthatically pleasing */
+    border: 2px solid black;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.buttonx::before{         /*preparing the buttonx for transition on hover*/     
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 0;
+    height: 100%;
+    background: black;
+    transform: skewX(45deg);
+    transition: 1s;
+}
+
+.buttonx:hover::before{          /*inreasign width for transition on hover*/    
+    width: 200%;
+    
+}
+
+.buttonx:hover{           /*changing border color and text color on hover*/    
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+.square:hover{             /*highlighting the square for an attack with animation to make it more aesthatically pleasing*/    
+    background: linear-gradient(90deg, black, grey, red);
+    background-repeat: no-repeat;
+    animation: backanim;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    height: 15px;
+    background-size: 800% 200%;
+}
+.battlefield{          /*setting the size of battlefield and preparing it for transition on hover*/    
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 1s;
+}
+
+.battlefield:hover{     /*battlefield's transition on hover*/    
+
+    box-shadow: 
+        0 0 20px black,
+        0 0 40px black,
+        0 0 60px black,
+        0 0 80px black;
+
+}
+
+.ship-choices{             /* making the ship-choices more aesthatically pleasing and setting for transition*/
+    width: 600px;
+    height: 100px;
+    margin: 15px auto;
+    background-color: rgb(182, 247, 145);
+    display: flex;
+    align-items: center;
+    transition: 1s;
+} 
+
+.ship-choices:hover{     /*shipchoices's transition on hover*/    
+
+    box-shadow: 
+        0 0 20px black,
+        0 0 40px rgb(182, 247, 145),
+        0 0 60px rgb(182, 247, 145);
+
+
+}

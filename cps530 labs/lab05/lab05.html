@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab05</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script> jQuery(init); function init(){ 
+        jQuery(".part").draggable({containment: ".canvas"});
+    }</script>
+    <style>
+        body{background-color: #f5f0e1;}
+        .game {background-color: #1e3d59;
+            color: white;
+        }
+        .part{
+            width: 150px;
+            position: relative;
+        }
+        .canvas{
+            width: 48vw;
+            height: 60vh;
+            background-color: black;
+        }
+        .preview{
+            width: 50%;
+            height: 50%;
+        }
+        #previewholder{
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+        .xclass{
+            position: fixed;
+            width: 2%;
+            background-color: black;
+            top: 0%;
+            right: 0%;
+            z-index: -1;
+        }
+        @keyframes animate{
+        0%{
+            position: fixed;
+            left: 25%;
+            top:50%;
+            width: 50%;
+            z-index: 100;
+            height:50%;
+        }
+        100%{
+            width: 100%;
+            z-index: 2;
+            height:100%;
+            left: 0%;
+            top: 0%;
+        }
+    }
+        @keyframes danimate{
+        0%{
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            height:100%;
+            left: 0%;
+            top: 0%;
+        }
+        100%{
+            position: fixed;
+            left: 25%;
+            top:50%;
+            width: 50%;
+            z-index: 100;
+            height:50%;
+        }
+    }   
+    </style>
+</head>
+<body>
+    <section class="row">
+        <section class="col-sm-12 col-md-12 col-lg-12 text-center fs-3 ">
+            <section class="game">
+                <section id="character"> Instructions - Start by clicking on Buttons of body parts to get them in the canvas. <br>
+                    Next drag them inside the canvas to get the desired picture. (You may make multiple  Mr Potato Heads if you wish) <br>
+                    Click on the Preview button(Top Left) to get a preview of the picture(Bottom). Hover on the preview to maximize it. <br>
+                    click on the cross at the top right corner to minimize it. click on download image to download the image<br>
+                </section>
+            </section>
+        </section>
+    </section>
+    
+    <section>
+        <section class="row justify-content-md-center">
+            <section class = "col-sm-12 col-md-2 col-lg-2 text-center fs-3 fw-bold">
+                <button onclick="takescreenshot()"> Preview</button>
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Body" id="myCheck" onclick="buttonpressed(1)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Eyes1" id="myCheck" onclick="buttonpressed(2)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Eyes2" id="myCheck" onclick="buttonpressed(3)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Eyes3" id="myCheck" onclick="buttonpressed(7)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Eyes4" id="myCheck" onclick="buttonpressed(8)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Hat" id="myCheck" onclick="buttonpressed(4)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Mouth" id="myCheck" onclick="buttonpressed(5)" />
+            </section>
+            <section class = "col-sm-12 col-md-1 col-lg-1 text-center fs-3 fw-bold">
+                <input type="button" value="Nose" id="myCheck" onclick="buttonpressed(6)" />
+            </section>
+            <section ic="canvas" class = "canvas col-sm-12 col-md-12 col-lg-12 mx-auto m-2"></section>
+            <section class="mx-auto text-center m-2 fw-bold">Preview</section>
+            <section class="preview " onmouseover="fullscreen()"><section id="previewholder">Placeholder</section></section>
+            <section class="mx-auto text-center m-2"><a id="canvasdownload" href="#" download="myCanvas.png"><button class="text-cen">Download image</button></a></section>
+            <button class="xclass" onclick="notfullscreen()"><img src="x.jpg" height="30"></button>
+            <section> <br><br><br><br><br></section>
+        </section>
+        </section>
+ <!--  onmouseover="myFunction()" -->   
+     
+    <script src="lab05.js"></script>
+</body>
+</html>

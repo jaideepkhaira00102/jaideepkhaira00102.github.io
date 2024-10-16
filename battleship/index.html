@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleShips</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-title"><img src='logo.jpg' height = 200></div>
+    <div class="main-title">BattleShips</div><br>
+    <div class="outer-data"><div  class="data-1" id="text">
+        <div id="turn"> Turn - </div> 
+        <div id="info"> Logs - </div></div>
+    <div class="data-2" id="text">
+        <div id="hits"> Hit - </div>
+        <div id="misses"> Misses - </div>
+    </div></div><br>
+    <div class="main-title"><div>Player</div><div>Enemy</div></div><br>
+    <div id="game-canvas"></div><!-- canvas to draw and play the game -->
+
+    <div class="ship-choices" id="selector">          <!-- block for all the ships that can be deployed -->
+        <div class="ship-1 ship-1-size" id ='0' draggable="true"></div>
+        <div class="ship-2 ship-2-size" id ='1'  draggable="true"></div>
+        <div class="ship-3 ship-3-size" id ='2'  draggable="true"></div>
+        <div class="ship-4 ship-4-size" id ='3'  draggable="true"></div>
+        <div class="ship-5 ship-5-size" id ='4'  draggable="true"></div>
+    </div>
+    
+    <div class='buttons'>
+        <button id="rotate" class='buttonx'> Rotate </button>
+        <button id="start" class='buttonx'> Start </button>
+        <button id="reset" class='buttonx'> Reset </button>
+    </div>
+    <div class="extra-info"> <br>Information Regarding the Game <br>
+        <br> Not hit - Black | Hit - Red | Ship destroyed - cyan 
+        <br>Turns top left, Logs top right<br> For evaluation you may use inspect element to speedrun throught the game
+        <br> Repeatedly selecting the same block for attack will result in message in the logs(top right) 
+        <br> Also feel free to zoom in using ctrl+mouse wheel up if needed 
+        <br> 5 Ships in total each with a length of, 5, 4, 3, 3 and 2. 
+        <br> Kill all the enemy ships to win before the enemy kills all of yours
+        <br> Drag and Drop the ships in the light green section into the grey player's section
+        <br> If the placement is invalid, the ship will return to the selection menu
+        <br> Click on rotate, to rotate all the ships in selection menu 
+        <br> click on start once all the sips are placed to start the game 
+        <br> Click on reset to reset the game
+        <br> The delay between attacks of the computer has intentinally been removed to help speed up the game and thus evaluation
+        <br> music starts once you start the game <br>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

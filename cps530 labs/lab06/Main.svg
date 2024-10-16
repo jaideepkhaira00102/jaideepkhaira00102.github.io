@@ -1,0 +1,19 @@
+<!DOCTYPE svg>
+<svg width="1000" height="450" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10,200 210,200 110,27" fill="#faff6e" stroke="#30311e" stroke-width="3px"></polygon>
+        <polygon points="260,25 260,200 435,200 435,25"  fill="#72c1d6" stroke="#30311e" stroke-width="3px"></polygon>
+        <polygon points="260,25 260,200 435,200 435,25"  fill="#72c1d6" stroke="#30311e" stroke-width="3px"></polygon>
+        <polygon points="560,25 650,90 620,200 500,200 470,90"  fill="#ffc2ac" stroke="#30311e" stroke-width="3px"></polygon>
+        <polygon points="780,25 850,75 850,150 780,200 710,150 710,75"  fill="#7dd9a9" stroke="#30311e" stroke-width="3px"></polygon>
+        <text x="70" y="220" style="font-size:22px; font-weight:bold;">Triangle</text>
+        <text x="280" y="220" style="font-size:22px; font-weight:bold;">Quadrilateral</text>
+        <text x="520" y="220" style="font-size:22px; font-weight:bold;">Pentagon</text>
+        <text x="740" y="220" style="font-size:22px; font-weight:bold;">Hexagon</text>
+        <rect x="50" y="250" width="250" height="150" fill="red"></rect>
+        <rect x="140" y="315" width="70" height="20" fill="white"></rect>
+        <rect x="165" y="290" width="20" height="70" fill="white"></rect>
+        <text x="90" y="420" style="font-size:22px; font-weight:bold;">Switzerland's Flag</text>
+        <rect x="350" y="250" width="250" height="150" fill="white" stroke="black"></rect>
+        <circle cx="470" cy="325" r="25" fill="red"></circle>
+        <text x="410" y="420" style="font-size:22px; font-weight:bold;">Japan's Flag</text>
+</svg>
