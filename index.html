@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css"/>
     <title>Portfolio</title>
+    <script src="jfile.js"></script>
 </head>
 <body>
     <nav>
@@ -25,8 +26,8 @@
                             <a href="./JaideepSinghKhairaResumeFinal.docx" download>Download Word</a>
                         </div>
                     </div>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
         </div>
     </nav>
@@ -38,7 +39,7 @@
                     I am <span>Jaideep<br> and </span> Welcome to my website
                 </h1>
                 <p class="description">
-                    This is a simple website made using only HTML and CSS.
+                    This is a simple website made using HTML, CSS and Javascript.
                 </p>
                 <div class="action__btn"> 
                     <button class="website"> Main Website</button>
@@ -84,9 +85,96 @@
         </div>
     </section>
         
-    <section>
+    <section id="portfolio">
+        <div class="container">
+            <div class="heading">Videos</div>
+            <div class="box">
+                <video id="vid1" onmouseover="playvideo(this)" onmouseleave="stopvideo(this)" onclick="openpopup(this)" src="Prototype3.mp4" type="video/mp4" class="Vid" loop></video>
+            </div>
+            <div class="box">
+                <video id="vid2" onmouseover="playvideo(this)" onmouseleave="stopvideo(this)" onclick="openpopup(this)" src="Vid1.mp4" type="video/mp4" class="Vid" loop></video>
+            </div>
+            <div class="box">
+                <video id="vid3" onmouseover="playvideo(this)" onmouseleave="stopvideo(this)" onclick="openpopup(this)" src="9.mp4" type="video/mp4" class="Vid" loop></video>
+            </div>
+        </div>
+        <div class="containerx">
+            <div class="heading">WebPages</div>
+            <div class="box">
+                <a href="\battleship\index.html">Battleship</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\HTML\Lab01.html">Website 1</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab02\Lab02.html">Website 2</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab03\Lab03.html">Website 3</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab04\Lab04.html">Website 4</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab05\Lab05.html">Website 5</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab06\Lab06.html">Website 6</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab07\Lab07b.html">Website 7</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab10\Lab10b.html">Website 8</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab10\index.html">Website 9</a>
+            </div>
+            <div class="heading">Code Files (CGI/PHP/ASP)</div>
+            <div class="box">
+                <a href="\cps530 labs\lab07\Lab07a.cgi">Website 1</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab07\Lab07b.cgi">Website 2</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab08\Lab08.php">Website 3</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab09a.cgi">Website 4</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab09b.cgi">Website 5</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab09c.cgi">Website 6</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab09d.cgi">Website 7</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab09e.cgi">Website 8</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab10\Lab10a.asp">Website 8</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab09\Lab10p.cgi">Website 8</a>
+            </div>
+            <div class="box">
+                <a href="\cps530 labs\lab10\Lab10r.cgi">Website 8</a>
+            </div>
+        </div>
 
     </section>
-    
+    <div class="popup">
+        <video class ="popupvid" src="Vid1.mkv" type="video/mp4" class="Vid" controls="true" loop></video>
+        <a ><img onclick="closepopup()" class="popupclose"src="close.png"></a>
+    </div>
+
+    <section class="contactpopdown" id="contact" onmouseenter="popupcontactopen()" onmouseleave="popupcontactclose()">
+        <div class="contacttext">Contact us <br>jaideepkhaira102@gmail.com<br>437-248-2755</div>
+        
+    </section>
 </body>
 </html>
